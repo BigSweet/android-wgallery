@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
 
 repositories {
-    maven { url "https://jitpack.io" }
+    maven {
+        url "https://jitpack.io"
+    }
 }
 
 android {
@@ -23,9 +25,6 @@ android {
     }
 }
 
-configurations.all {
-    resolutionStrategy.cacheChangingModulesFor(0, 'seconds') // 每次都更新 Maven 依赖包
-}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
